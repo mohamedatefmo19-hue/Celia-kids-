@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  <title>Celia Kids | متجر أطفال عالمي فاخر</title>
+  <meta name="description" content="اكتشف تشكيلة Celia Kids الراقية ملابس وألعاب الأطفال الفاخرة. جودة عالمية وتصاميم مبهجة تناسب ملاكك الصغير بأفضل الأسعار وعروض حصرية.">
+  <meta name="keywords" content="ملابس أطفال, متجر أطفال, ألعاب أطفال, Celia Kids, أزياء أطفال عالمية, فساتين أطفال">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://celiakids.com/">
+  <meta property="og:title" content="Celia Kids | متجر أطفال عالمي فاخر">
+  <meta property="og:description" content="اكتشف تشكيلة Celia Kids الراقية ملابس وألعاب الأطفال الفاخرة. جودة عالمية وتصاميم مبهجة تناسب ملاكك الصغير.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1622290319146-7b63df48a635?auto=format&fit=crop&w=800&q=80">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Celia Kids",
+    "image": "https://images.unsplash.com/photo-1622290319146-7b63df48a635?auto=format&fit=crop&w=800&q=80",
+    "description": "متجر أطفال عالمي فاخر لملابس وأكسسوارات الأطفال الفاخرة بلمسة عصرية.",
+    "telephone": "0221298898",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <style>
+    /* --- CSS Variables & Palettes --- */
+    :root {
+      --pink: #FF6BAA;
+      --pink-hover: #e55a95;
+      --sky: #7DD3FC;
+      --purple: #C084FC;
+      --yellow: #FDE047;
+      
+      /* Light Mode */
+      --bg-gradient: linear-gradient(135deg, #fef2f2 0%, #f0fdfa 50%, #faf5ff 100%);
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --glass-bg: rgba(255, 255, 255, 0.45);
+      --glass-border: rgba(255, 255, 255, 0.6);
+      --card-bg: rgba(255, 255, 255, 0.7);
+      --header-bg: rgba(255, 255, 255, 0.65);
+      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+      --input-bg: rgba(255, 255, 255, 0.8);
+      --border-radius: 24px;
+    }
+
+    html.dark {
+      /* Dark Mode */
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e152a 50%, #111827 100%);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --glass-bg: rgba(15, 23, 42, 0.45);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --header-bg: rgba(15, 23, 42, 0.7);
+      --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      --input-bg: rgba(15, 23, 42, 0.8);
+    }
+
+    /* --- Reset & Base --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* --- Glassmorphism Core Utilities --- */
+    .glass-effect {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow);
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+
+    /* --- Header / Navigation --- */
+    header {
+      background: var(--header-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--pink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-shadow: 0 2px 10px rgba(255, 107, 170, 0.2);
+    }
+    .logo span { color: var(--sky); }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a, nav button {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem 0.8rem;
+      border-radius: 12px;
+    }
+    nav a:hover, nav button:hover {
+      color: var(--pink);
+      background: rgba(255, 107, 170, 0.08);
+    }
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
+    .cart-badge, .wishlist-badge {
+      position: relative;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .badge-count {
+      position: absolute;
+      top: -6px;
+      left: -10px;
+      background: var(--purple);
+      color: #fff;
+      border-radius: 50%;
+      padding: 1px 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    .mode-toggle {
+      background: var(--pink);
+      color: #fff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 107, 170, 0.3);
+    }
+
+    /* --- Main Layout --- */
+    main { flex: 1; padding: 2rem 5%; max-width: 1400px; margin: 0 auto; width: 100%; animation: fadeIn 0.5s ease-in-out; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 2.2rem;
+      background: linear-gradient(45deg, var(--pink), var(--purple));
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255, 107, 170, 0.3);
+      text-decoration: none;
+      transform: scale(1);
+    }
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(255, 107, 170, 0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--pink);
+      color: var(--pink);
+      box-shadow: none;
+    }
+    .btn-outline:hover {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      margin-bottom: 4rem;
+      padding: 4rem 3rem;
+      display: flex;
+      align-items: center;
+      min-height: 550px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.4) 100%);
+    }
+    html.dark .hero-overlay {
+      background: linear-gradient(90deg, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.5) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 600px; }
+    .hero-content h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-main); }
+    .hero-content h1 span { color: var(--pink); }
+    .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* --- Grid Systems --- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+    .section-title { font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 2rem; position: relative; color: var(--text-main); }
+    .section-title::after { content: ''; display: block; width: 60px; height: 5px; background: var(--sky); margin: 0.5rem auto 0; border-radius: 10px; }
+
+    /* --- Product Cards --- */
+    .product-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .product-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: calc(var(--border-radius) - 4px);
+    }
+    .product-card img { width: 100%; height: 320px; object-fit: cover; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .product-card:hover img { transform: scale(1.06); }
+    .card-badges { position: absolute; top: 1rem; right: 1rem; display: flex; flex-direction: column; gap: 0.5rem; z-index: 5; }
+    .badge { padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; color: #fff; text-align: center; }
+    .badge-sale { background: var(--pink); }
+    .badge-new { background: var(--sky); color: #1f2937; }
+    .card-actions {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.8rem;
+      width: 90%;
+      transition: bottom 0.3s ease;
+      z-index: 5;
+    }
+    .product-card:hover .card-actions { bottom: 1rem; }
+    .action-btn {
+      flex: 1;
+      padding: 0.6rem;
+      background: rgba(255,255,255,0.9);
+      color: #1f2937;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+    .action-btn:hover { background: var(--pink); color: #fff; }
+    .product-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+    .product-body h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main); }
+    .stars { color: var(--yellow); font-size: 1rem; margin-bottom: 0.5rem; }
+    .price-container { display: flex; align-items: center; gap: 0.8rem; margin-top: auto; }
+    .price { font-size: 1.4rem; font-weight: 900; color: var(--pink); }
+    .old-price { text-decoration: line-through; color: var(--text-muted); font-size: 1rem; }
+
+    /* --- Cart Drawer (جانبي) --- */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      left: -400px;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      box-shadow: var(--shadow);
+      z-index: 2000;
+      transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--glass-border);
+    }
+    .cart-drawer.open { left: 0; }
+    .drawer-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+    .drawer-content { flex: 1; padding: 1.5rem; overflow-y: auto; }
+    .drawer-footer { padding: 1.5rem; border-top: 1px solid var(--glass-border); background: rgba(0,0,0,0.02); }
+
+    /* --- Forms & Controls --- */
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 700; font-size: 0.9rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      background: var(--input-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 4px rgba(255, 107, 170, 0.15);
+    }
+
+    /* --- Categories Section --- */
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+    .category-box { padding: 2rem 1rem; text-align: center; cursor: pointer; border-radius: var(--border-radius); transition: transform 0.2s; }
+    .category-box:hover { transform: translateY(-5px); border-color: var(--pink); }
+    .category-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+    /* --- Admin Panel Styling --- */
+    .admin-panel { display: flex; min-height: calc(100vh - 80px); margin-top: 1rem; gap: 2rem; }
+    .admin-sidebar { width: 260px; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    .admin-sidebar a { display: block; color: var(--text-main); text-decoration: none; padding: 0.8rem 1.2rem; font-weight: 700; border-radius: 12px; }
+    .admin-sidebar a:hover, .admin-sidebar a.active { background: var(--pink); color: white; }
+    .admin-content { flex: 1; padding: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; overflow: hidden; border-radius: 16px; }
+    th, td { padding: 1rem; text-align: right; border-bottom: 1px solid var(--glass-border); }
+    th { background: rgba(255, 107, 170, 0.1); color: var(--pink); font-weight: 900; }
+    
+    /* --- Dashboard Analytics Stats --- */
+    .analytics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .stat-card { padding: 2rem; border-radius: var(--border-radius); text-align: center; }
+    .stat-val { font-size: 2.2rem; font-weight: 900; color: var(--purple); margin-top: 0.5rem; }
+
+    /* --- Modals & Backdrop --- */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; z-index: 2500; }
+    .modal-content { max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto; border-radius: 24px; padding: 2.5rem; position: relative; }
+    
+    /* --- Footer --- */
+    footer {
+      background: var(--header-bg);
+      border-top: 1px solid var(--glass-border);
+      padding: 3rem 5% 1.5rem;
+      margin-top: 5rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; }
+    .footer-col h4 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--pink); }
+    .footer-col p, .footer-col a { color: var(--text-muted); text-decoration: none; line-height: 1.8; font-size: 0.95rem; }
+    .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-muted); font-size: 0.9rem; }
+
+    /* --- Responsive Fixes --- */
+    @media (max-width: 1024px) {
+      header { padding: 1rem 3%; }
+      nav { gap: 0.8rem; }
+      .hero-content h1 { font-size: 2.8rem; }
+    }
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 1rem; text-align: center; }
+      .admin-panel { flex-direction: column; }
+      .admin-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 1rem 0; }
+      .admin-sidebar a { padding: 0.5rem 1rem; font-size: 0.85rem; }
+      .hero { padding: 2.5rem 1.5rem; text-align: center; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h2>حقيبة التسوق</h2>
+      <button onclick="toggleCartDrawer()" style="font-size: 1.5rem; background:none; border:none; color:var(--text-main); cursor:pointer;">&times;</button>
+    </div>
+    <div class="drawer-content" id="drawerItems">
+      </div>
+    <div class="drawer-footer" id="drawerFooter">
+      </div>
+  </div>
+
+  <header>
+    <a href="#" class="logo" onclick="navigate('home')">Celia<span>Kids</span></a>
+    <nav>
+      <a href="#" onclick="navigate('home')">الرئيسية</a>
+      <a href="#" onclick="navigate('products')">الملابس والمنتجات</a>
+      <a href="#" onclick="navigate('branches')">فروعنا</a>
+      <a href="#" onclick="navigate('contact')">تواصل معنا</a>
+      <button onclick="switchToAdmin()" style="color: var(--purple);">لوحة الإدارة</button>
+    </nav>
+    <div class="nav-actions">
+      <span id="authArea"></span>
+      <div class="wishlist-badge" onclick="navigate('wishlist')" title="المفضلة">
+        ❤️ <span class="badge-count" id="wishlistCount">0</span>
+      </div>
+      <div class="cart-badge" onclick="toggleCartDrawer()" title="سلة التسوق">
+        🛒 <span class="badge-count" id="cartCount">0</span>
+      </div>
+      <div class="mode-toggle" onclick="toggleDarkMode()" id="darkModeBtn">🌓</div>
+    </div>
+  </header>
+
+  <main id="mainContent"></main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Celia Kids</h4>
+        <p>عالم متكامل مصمم خصيصاً ليمنح ملاكك الصغير الفخامة والأناقة في شتى مراحل طفولته المبهجة بأعلى المقاييس الدولية.</p>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <p><a href="#" onclick="navigate('products')">كل المنتجات</a></p>
+        <p><a href="#" onclick="navigate('branches')">الفروع ومواقعنا</a></p>
+        <p><a href="#" onclick="navigate('contact')">الدعم الفني والشكاوى</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>خدمة العملاء المباشرة</h4>
+        <p style="font-size: 1.2rem; font-weight: bold; color: var(--pink);">0221298898</p>
+        <p>البريد الإلكتروني: support@celiakids.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Celia Kids. جميع الحقوق محفوظة لمتجر سيليا للأطفال.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="globalModal"></div>
+
+  <script>
+    // --- البيانات الأساسية المطورة للمنتجات لمتجر أطفال عالمي احترافي بنظام Lazy loading والمفضلة ---
+    const defaultProducts = [
+      { id: '1', name: 'طقم كشمير ملكي ناعم', category: 'ملابس شتوية', price: 120, discountPrice: 80, rating: 4.8, stock: 15, sizes: ['S','M','L'], colors: ['Pink','Beige'], images: ['https://images.unsplash.com/photo-1622290319146-7b63df48a635?auto=format&fit=crop&w=600&q=80'], description: 'طقم كشمير فاخر ناعم جداً على بشرة الأطفال الحساسة، يحافظ على الدفء والأناقة.', isNew: true },
+      { id: '2', name: 'فستان الحرير الوردي الراقي', category: 'فساتين والمنسبات', price: 150, discountPrice: null, rating: 5.0, stock: 8, sizes: ['M','L'], colors: ['Pink','White'], images: ['https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80'], description: 'فستان من الحرير الطبيعي الخالص مزين بتطريز سيليا اليدوي الفاخر للحفلات والأعياد.', isNew: false },
+      { id: '3', name: 'دنيم سيليا العصري الصيفي', category: 'شورتات وبناطيل', price: 65, discountPrice: 45, rating: 4.2, stock: 25, sizes: ['28','30'], colors: ['Blue'], images: ['https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80'], description: 'شورت جينز مطاطي مريح للغاية يسمح لطفلك بالحركة واللعب بكل حرية ومرونة.', isNew: false },
+      { id: '4', name: 'جاكيت صوف فاخر مبطن', category: 'معاطف وجواكيت', price: 190, discountPrice: 135, rating: 4.7, stock: 12, sizes: ['M','L','XL'], colors: ['Grey','Navy'], images: ['https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80'], description: 'معطف من الصوف النقي المعالج مبطن بطبقة قطنية عازلة ومثالية للأجواء الباردة.', isNew: true },
+      { id: '5', name: 'عطر طفولتي المبهج الخالي من الكحول', category: 'عطور وعناية', price: 85, discountPrice: 60, rating: 4.9, stock: 30, sizes: [], colors: [], images: ['https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80'], description: 'تركيبة فريدة فرنسية لطيفة خالية تماماً من الكحول والمواد الكيميائية لرائحة تدوم طويلاً.', isNew: false },
+      { id: '6', name: 'مجموعة ألعاب المونتيسوري الخشبية للتنمية', category: 'ألعاب خشبية', price: 110, discountPrice: null, rating: 4.6, stock: 14, sizes: [], colors: [], images: ['https://images.unsplash.com/photo-1515488042361-404e9250afef?auto=format&fit=crop&w=600&q=80'], description: 'مجموعة متكاملة لتنمية ذكاء الطفل وحواسه الحركية ومصنوعة من أخشاب الغابات المستدامة والآمنة.', isNew: true }
+    ];
+
+    const defaultBranches = [
+      { id: 1, name: 'فرع سيليا كيدز - سيتي ستارز', address: 'مول سيتي ستارز، الدور الثالث، مدينة نصر، القاهرة', phone: '0221298898', mapLink: 'https://maps.google.com' },
+      { id: 2, name: 'فرع سيليا كيدز - مول العرب', address: 'مول العرب، بوابة رقم 4، مدينة السادس من أكتوبر', phone: '0221298898', mapLink: 'https://maps.google.com' },
+      { id: 3, name: 'فرع سيليا كيدز - سان ستيفانو', address: 'سان ستيفانو جراند بلازا، الإسكندرية', phone: '0221298898', mapLink: 'https://maps.google.com' }
+    ];
+
+    // تهيئة البيانات والتحقق من التخزين المحلي لعدم إتلاف البيانات الحالية وتأمين لوحة التحكم
+    if (!localStorage.getItem('sutra_products')) localStorage.setItem('sutra_products', JSON.stringify(defaultProducts));
+    if (!localStorage.getItem('sutra_users')) {
+      const adminUser = { id: 'u1', name: 'مدير النظام الفاخر', email: 'admin@sutra.com', password: 'admin123', role: 'admin', isBanned: false };
+      localStorage.setItem('sutra_users', JSON.stringify([adminUser]));
+    }
+    if (!localStorage.getItem('sutra_orders')) localStorage.setItem('sutra_orders', JSON.stringify([]));
+    if (!localStorage.getItem('sutra_coupons')) localStorage.setItem('sutra_coupons', JSON.stringify([{id:'c1', code:'CELIA10', discountPercent:10, maxUsage:50, usedCount:0, isActive:true}]));
+
+    // --- الستيت العام للتطبيق والدولة والمفضلة والوضع الليلي ---
+    let currentUser = JSON.parse(localStorage.getItem('sutra_currentUser')) || null;
+    let cart = JSON.parse(localStorage.getItem('sutra_cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('sutra_wishlist')) || [];
+    let appliedCoupon = null;
+    let currentPage = 'home';
+    let adminMode = false;
+    let adminSection = 'dashboard';
+
+    // الحفاظ التام والذكي على آليات تخزين البيانات وجلبها من الـ localStorage
+    function saveData(key, data) { localStorage.setItem(key, JSON.stringify(data)); }
+    function getProducts() { return JSON.parse(localStorage.getItem('sutra_products')); }
+    function getUsers() { return JSON.parse(localStorage.getItem('sutra_users')); }
+    function getOrders() { return JSON.parse(localStorage.getItem('sutra_orders')); }
+    function getCoupons() { return JSON.parse(localStorage.getItem('sutra_coupons')); }
+
+    function updateCounters() {
+      document.getElementById('cartCount').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById('wishlistCount').textContent = wishlist.length;
+    }
+
+    function renderStars(rating) {
+      let html = '';
+      for (let i = 1; i <= 5; i++) { html += i <= Math.round(rating) ? '★' : '☆'; }
+      return `<div class="stars">${html}</div>`;
+    }
+
+    function formatPrice(price) { return '$' + Number(price).toFixed(2); }
+
+    // تفعيل وتغيير وضع الرؤية المظلم والفاتح (Dark/Light mode) لرفع التخصيص والأداء لـ 100%
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    // تطبيق الفكرة الذكية لحفظ الثيم المحدد مسبقاً
+    if (localStorage.getItem('theme') === 'dark') { document.documentElement.classList.add('dark'); }
+
+    function toggleCartDrawer() {
+      document.getElementById('cartDrawer').classList.toggle('open');
+      if (document.getElementById('cartDrawer').classList.contains('open')) { renderCartDrawer(); }
+    }
+
+    function navigate(page) {
+      adminMode = false;
+      currentPage = page;
+      window.scrollTo({top: 0, behavior: 'smooth'});
+      render();
+    }
+
+    function switchToAdmin() {
+      adminMode = true;
+      adminSection = (!currentUser || currentUser.role !== 'admin') ? 'login' : 'dashboard';
+      render();
+    }
+
+    // --- الرندرة الشاملة لصفحات المتجر والتحكم ---
+    function render() {
+      updateCounters();
+      const authArea = document.getElementById('authArea');
+      if (currentUser) {
+        authArea.innerHTML = `<span style="font-weight:700; color:var(--pink); font-size:0.9rem; margin-left:0.5rem;">أهلاً، ${currentUser.name}</span>
+          <button onclick="logout()" style="color:var(--text-muted); font-size:0.85rem;">خروج</button>`;
+      } else {
+        authArea.innerHTML = `<a href="#" onclick="navigate('login')" style="font-size:0.9rem;">تسجيل دخول</a>`;
+      }
+
+      const main = document.getElementById('mainContent');
+      if (adminMode) {
+        renderAdmin();
+      } else {
+        switch (currentPage) {
+          case 'home': renderHome(); break;
+          case 'products': renderProducts(); break;
+          case 'wishlist': renderWishlist(); break;
+          case 'checkout': renderCheckout(); break;
+          case 'branches': renderBranches(); break;
+          case 'contact': renderContact(); break;
+          case 'login': renderLogin(); break;
+          case 'register': renderRegister(); break;
+          default: renderHome();
+        }
+      }
+    }
+
+    // --- تصميم الصفحة الرئيسية الاحترافية بالكامل ---
+    function renderHome() {
+      const products = getProducts();
+      const featuredHtml = products.slice(0, 3).map(p => productCardTemplate(p)).join('');
+      const bestSellersHtml = products.slice(3, 6).map(p => productCardTemplate(p)).join('');
+
+      document.getElementById('mainContent').innerHTML = `
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1200&q=80');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="badge badge-sale" style="margin-bottom: 1rem; display:inline-block;">خصومات العيد والموسم الجديد تصل إلى 50%</div>
+            <h1>مرحباً بكم في عالم <span>Celia Kids</span> للأناقة</h1>
+            <p>نصنع الفرحة في تفاصيل أزياء أطفالكم، جودة عالمية وخامات قطنية فائقة النعومة صممت خصيصاً لتناسب حركاتهم النشطة والمرحة.</p>
+            <div style="display:flex; gap:1rem;">
+              <button class="btn" onclick="navigate('products')">تسوق التشكيلة الآن</button>
+              <button class="btn btn-outline" onclick="scrollToElement('categoriesSection')">استكشف الأقسام</button>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="section-title" id="categoriesSection">تسوق حسب الفئة</h2>
+        <div class="category-grid">
+          <div class="category-box glass-card" onclick="setCategoryFilter('ملابس شتوية')"><span class="category-icon">🧥</span><h3>ملابس شتوية</h3></div>
+          <div class="category-box glass-card" onclick="setCategoryFilter('فساتين والمنسبات')"><span class="category-icon">👗</span><h3>فساتين ومناسبات</h3></div>
+          <div class="category-box glass-card" onclick="setCategoryFilter('شورتات وبناطيل')"><span class="category-icon">👖</span><h3>شورتات وبناطيل</h3></div>
+          <div class="category-box glass-card" onclick="setCategoryFilter('ألعاب خشبية')"><span class="category-icon">🧸</span><h3>ألعاب وهدايا</h3></div>
+        </div>
+
+        <h2 class="section-title">وصل حديثاً (New Arrivals)</h2>
+        <div class="grid">${featuredHtml}</div>
+
+        <h2 class="section-title" style="margin-top:4rem;">الأكثر مبيعاً ورواجاً</h2>
+        <div class="grid">${bestSellersHtml}</div>
+
+        <section style="margin-top:5rem;">
+          <h2 class="section-title">ماذا قال الأباء والأمهات عن سيليا؟</h2>
+          <div class="grid">
+            <div class="glass-card" style="padding:2rem;">
+              ${renderStars(5)}
+              <p style="margin:1rem 0; font-style:italic; color:var(--text-muted);">"الخامات رائعة جداً، غسلت الفستان أكثر من خمس مرات ولم يتغير لونه أو جودته مطلقاً، شكراً Celia Kids!"</p>
+              <strong>سارة أحمد - أم لطفلين</strong>
+            </div>
+            <div class="glass-card" style="padding:2rem;">
+              ${renderStars(5)}
+              <p style="margin:1rem 0; font-style:italic; color:var(--text-muted);">"سرعة التوصيل وخدمة العملاء محترمة جداً. التغليف فخم ومناسب لتقديمه كهدية فاخرة."</p>
+              <strong>محمد علي - أب لـ طفلة</strong>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:5rem;">
+          <h2 class="section-title">الأسئلة الشائعة</h2>
+          <div class="glass-card" style="padding:2rem; display:flex; flex-direction:column; gap:1.5rem;">
+            <div>
+              <h4 style="color:var(--pink); font-size:1.1rem; margin-bottom:0.5rem;">هل الخامات آمنة على بشرة الأطفال حديثي الولادة؟</h4>
+              <p style="color:var(--text-muted);">نعم، جميع ملابسنا مصنوعة من القطن العضوي الخالص 100% المعالج ضد الحساسية وخالي من الأصباغ الكيميائية الضارة.</p>
+            </div>
+            <hr style="border:none; border-top:1px solid var(--glass-border);">
+            <div>
+              <h4 style="color:var(--pink); font-size:1.1rem; margin-bottom:0.5rem;">كم يستغرق الشحن والتوصيل للمحافظات؟</h4>
+              <p style="color:var(--text-muted);">الشحن يستغرق من 24 إلى 48 ساعة فقط لجميع محافظات مصر والمدن الكبرى.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="glass-card" style="margin-top:5rem; padding:3rem; text-align:center; background: linear-gradient(rgba(255,107,170,0.05), rgba(192,132,252,0.05)); border: 2px solid var(--pink);">
+          <h2 style="margin-bottom:0.5rem;">انضمي إلى عائلة سيليا كيدز السعيدة</h2>
+          <p style="color:var(--text-muted); margin-bottom:1.5rem;">اشتركي في النشرة البريدية لتكوني أول من يصله تنبيهات الخصومات الحصرية وتشكيلات المواسم قبل الجميع.</p>
+          <div style="max-width:500px; margin:0 auto; display:flex; gap:0.5rem;">
+            <input type="email" placeholder="أدخلي بريدك الإلكتروني هنا" style="flex:1; padding:0.8rem 1.2rem; border-radius:50px; border:1px solid var(--glass-border); outline:none;">
+            <button class="btn" onclick="alert('شكراً لانضمامك إلينا! تم إرسال كود خصم ترحيبي لبريدك.')">اشترك الآن</button>
+          </div>
+        </section>
+      `;
+    }
+
+    // القالب الموحد والاحترافي لبطاقة عرض المنتج مع تأثير الحركات والـ Quick View والمفضلة والبادجات التنافسية
+    function productCardTemplate(p) {
+      const discountPercent = p.discountPrice ? Math.round(((p.price - p.discountPrice)/p.price)*100) : 0;
+      const isFav = wishlist.some(item => item.id === p.id);
+      return `
+        <div class="glass-card product-card">
+          <div class="product-img-wrapper">
+            <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+            <div class="card-badges">
+              ${p.discountPrice ? `<span class="badge badge-sale">خصم ${discountPercent}%</span>` : ''}
+              ${p.isNew ? `<span class="badge badge-new">جديد ممتاز</span>` : ''}
+            </div>
+            <div class="card-actions">
+              <button class="action-btn" onclick="openQuickView('${p.id}')">👁️ نظرة سريعة</button>
+              <button class="action-btn" onclick="toggleWishlist('${p.id}')" style="color:${isFav ? 'red':'inherit'}">${isFav ? '❤️ بالمفضلة':'❤️ أضف'}</button>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 onclick="openQuickView('${p.id}')" style="cursor:pointer;">${p.name}</h3>
+            ${renderStars(p.rating || 4.5)}
+            <div class="price-container">
+              ${p.discountPrice ? `
+                <span class="price">${formatPrice(p.discountPrice)}</span>
+                <span class="old-price">${formatPrice(p.price)}</span>
+              ` : `
+                <span class="price">${formatPrice(p.price)}</span>
+              `}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function scrollToElement(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function setCategoryFilter(catName) {
+      navigate('products');
+      setTimeout(() => {
+        const catFilterInput = document.getElementById('catFilter');
+        if (catFilterInput) {
+          catFilterInput.value = catName;
+          applyFilters();
+        }
+      }, 50);
+    }
+
+    // --- صفحة عرض كل المنتجات مع الفلترة والفرز الاحترافي المطور ---
+    function renderProducts() {
+      const products = getProducts();
+      const categories = [...new Set(products.map(p => p.category))];
+      
+      let filtered = products;
+      let productsHtml = filtered.map(p => productCardTemplate(p)).join('');
+
+      let categoryOptions = categories.map(c => `<option value="${c}">${c}</option>`).join('');
+
+      document.getElementById('mainContent').innerHTML = `
+        <h1 class="section-title">تشكيلة المنتجات والأزياء</h1>
+        <div class="glass-card" style="padding:1.5rem; display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; align-items:center;">
+          <div style="flex:1; min-width:200px;">
+            <label style="font-weight:700; font-size:0.85rem; display:block; margin-bottom:0.3rem;">تصفية حسب القسم</label>
+            <select id="catFilter" onchange="applyFilters()">
+              <option value="">جميع الأقسام والمنتجات</option>
+              ${categoryOptions}
+            </select>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <label style="font-weight:700; font-size:0.85rem; display:block; margin-bottom:0.3rem;">الترتيب والفرز</label>
+            <select id="sortFilter" onchange="applyFilters()">
+              <option value="">افتراضي</option>
+              <option value="price_asc">السعر: من الأقل للأعلى</option>
+              <option value="price_desc">السعر: من الأعلى للأقل</option>
+              <option value="rating_desc">الأعلى تقييماً</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid" id="productsCatalogGrid">${productsHtml || '<p>عذراً، لم نجد منتجات تطابق خياراتك.</p>'}</div>
+      `;
+    }
+
+    function applyFilters() {
+      const cat = document.getElementById('catFilter').value;
+      const sort = document.getElementById('sortFilter').value;
+      let filtered = getProducts();
+
+      if (cat) filtered = filtered.filter(p => p.category === cat);
+      if (sort === 'price_asc') filtered.sort((a,b) => (a.discountPrice||a.price) - (b.discountPrice||b.price));
+      else if (sort === 'price_desc') filtered.sort((a,b) => (b.discountPrice||b.price) - (a.discountPrice||a.price));
+      else if (sort === 'rating_desc') filtered.sort((a,b) => b.rating - a.rating);
+
+      const grid = document.getElementById('productsCatalogGrid');
+      grid.innerHTML = filtered.map(p => productCardTemplate(p)).join('') || '<p>عذراً، لم نجد منتجات تطابق خياراتك.</p>';
+    }
+
+    // --- النافذة السريعة للمنتج (Quick View) وتعديل خيارات القياس والألوان برمجياً ---
+    function openQuickView(id) {
+      const product = getProducts().find(p => p.id == id);
+      if (!product) return;
+      
+      window.selectedSize = product.sizes[0] || '';
+      window.selectedColor = product.colors[0] || '';
+
+      const modal = document.getElementById('globalModal');
+      let sizeOptions = product.sizes.map((s, idx) => `<button class="btn btn-outline size-opt" style="padding:0.4rem 1rem; margin:2px; border-radius:10px; ${idx===0?'border-color:var(--pink); background:var(--pink); color:white;':''}" onclick="selectSizeOpt('${s}', this)">${s}</button>`).join('');
+      let colorOptions = product.colors.map((c, idx) => `<button class="color-opt" style="background:${c}; width:32px; height:32px; border-radius:50%; margin:4px; border:2px solid #fff; box-shadow:${idx===0?'0 0 0 2px var(--pink)':'none'}; cursor:pointer;" onclick="selectColorOpt('${c}', this)"></button>`).join('');
+
+      modal.innerHTML = `
+        <div class="modal-content glass-card">
+          <span style="position:absolute; top:15px; left:20px; font-size:2rem; cursor:pointer;" onclick="closeModal()">&times;</span>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top:1rem;">
+            <div style="flex:1; min-width:250px;">
+              <img src="${product.images[0]}" style="width:100%; height:350px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div style="flex:1.2; min-width:250px; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <h2>${product.name}</h2>
+                <span class="badge badge-new" style="display:inline-block; margin:0.5rem 0;">${product.category}</span>
+                ${renderStars(product.rating)}
+                <p style="margin:1rem 0; font-size:1.1rem; line-height:1.5; color:var(--text-muted);">${product.description}</p>
+                <div style="margin:1rem 0;">
+                  ${product.sizes.length ? `<p style="font-weight:bold; margin-bottom:0.3rem;">القياس المتاح العام:</p><div>${sizeOptions}</div>` : ''}
+                  ${product.colors.length ? `<p style="font-weight:bold; margin-top:1rem; margin-bottom:0.3rem;">الألوان المتاحة:</p><div style="display:flex;">${colorOptions}</div>` : ''}
+                </div>
+              </div>
+              <div>
+                <p style="font-size:1.8rem; font-weight:900; color:var(--pink); margin-bottom:1rem;">${formatPrice(product.discountPrice || product.price)}</p>
+                <button class="btn" style="width:100%;" onclick="addToCartDirect('${product.id}')">🛒 إضافة إلى الحقيبة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() { document.getElementById('globalModal').style.display = 'none'; }
+
+    function selectSizeOpt(size, btn) {
+      document.querySelectorAll('.size-opt').forEach(b => { b.style.borderColor='var(--pink)'; b.style.background='transparent'; b.style.color='var(--pink)'; });
+      btn.style.background = 'var(--pink)';
+      btn.style.color = '#fff';
+      window.selectedSize = size;
+    }
+    function selectColorOpt(color, btn) {
+      document.querySelectorAll('.color-opt').forEach(b => b.style.boxShadow = 'none');
+      btn.style.boxShadow = '0 0 0 2px var(--pink)';
+      window.selectedColor = color;
+    }
+
+    function addToCartDirect(productId) {
+      const product = getProducts().find(p => p.id == productId);
+      const size = window.selectedSize || '';
+      const color = window.selectedColor || '';
+      
+      const existing = cart.find(i => i.id === product.id && i.size === size && i.color === color);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...product, size, color, quantity: 1 });
+      }
+      saveData('sutra_cart', cart);
+      updateCounters();
+      closeModal();
+      renderCartDrawer();
+      toggleCartDrawer();
+    }
+
+    // --- المفضلة تفاعلياً (Wishlist) ---
+    function toggleWishlist(id) {
+      const product = getProducts().find(p => p.id == id);
+      const index = wishlist.findIndex(item => item.id == id);
+      if (index > -1) {
+        wishlist.splice(index, 1);
+      } else {
+        wishlist.push(product);
+      }
+      saveData('sutra_wishlist', wishlist);
+      updateCounters();
+      if (currentPage === 'wishlist') { renderWishlist(); } else { render(); }
+    }
+
+    function renderWishlist() {
+      let html = wishlist.map(p => productCardTemplate(p)).join('');
+      document.getElementById('mainContent').innerHTML = `
+        <h1 class="section-title">قائمة أمنياتي المفضلة ❤️</h1>
+        ${wishlist.length ? `<div class="grid">${html}</div>` : '<p style="text-align:center; padding:3rem; color:var(--text-muted);">لم تقم بإضافة أي منتجات للمفضلة بعد.</p>'}
+      `;
+    }
+
+    // --- حساب وعرض محتويات حقيبة السلة الجانبية الفخمة وتطبيق نظام الكوبونات الشامل ---
+    function renderCartDrawer() {
+      const drawerItems = document.getElementById('drawerItems');
+      const drawerFooter = document.getElementById('drawerFooter');
+      
+      if (!cart.length) {
+        drawerItems.innerHTML = '<p style="text-align:center; margin-top:4rem; color:var(--text-muted);">حقيبة التسوق فارغة تماماً.</p>';
+        drawerFooter.innerHTML = '';
+        return;
+      }
+
+      let total = 0;
+      let itemsHtml = cart.map((item, idx) => {
+        let itemPrice = item.discountPrice || item.price;
+        total += itemPrice * item.quantity;
+        return `
+          <div class="glass-card" style="display:flex; padding:0.8rem; margin-bottom:1rem; gap:1rem; align-items:center;">
+            <img src="${item.images[0]}" style="width:65px; height:65px; object-fit:cover; border-radius:12px;">
+            <div style="flex:1;">
+              <h4 style="font-size:0.95rem; margin-bottom:0.2rem;">${item.name}</h4>
+              <p style="font-size:0.75rem; color:var(--text-muted);">${item.size} | ${item.color}</p>
+              <p style="color:var(--pink); font-weight:bold; font-size:0.9rem; margin-top:0.2rem;">${formatPrice(itemPrice)}</p>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.2rem;">
+              <input type="number" min="1" value="${item.quantity}" onchange="changeDrawerQty(${idx}, this.value)" style="width:45px; text-align:center; padding:0.2rem; border-radius:8px; border:1px solid var(--glass-border);">
+              <button onclick="removeDrawerItem(${idx})" style="background:none; border:none; color:#f44; font-size:0.8rem; cursor:pointer;">حذف</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      drawerItems.innerHTML = itemsHtml;
+
+      // حساب الخصم الحقيقي في حال وجود كود الكوبون المفعل
+      let discountAmount = 0;
+      if (appliedCoupon) {
+        discountAmount = total * (appliedCoupon.discountPercent / 100);
+      }
+      let finalTotal = total - discountAmount;
+
+      drawerFooter.innerHTML = `
+        <div style="display:flex; justify-between:space-between; margin-bottom:0.6rem; font-weight:bold;"><span>المجموع الفرعي:</span><span style="margin-right:auto;">${formatPrice(total)}</span></div>
+        ${appliedCoupon ? `<div style="display:flex; justify-between:space-between; margin-bottom:0.6rem; color:green;"><span>خصم الكوبون (${appliedCoupon.code}):</span><span style="margin-right:auto;">-${formatPrice(discountAmount)}</span></div>` : ''}
+        <div style="display:flex; justify-between:space-between; margin-bottom:1rem; font-size:1.2rem; font-weight:900; color:var(--purple);"><span>الإجمالي النهائي:</span><span style="margin-right:auto;">${formatPrice(finalTotal)}</span></div>
+        
+        <div style="display:flex; gap:0.3rem; margin-bottom:1rem;">
+          <input type="text" id="couponCodeInput" placeholder="كود الخصم (مثال: CELIA10)" style="flex:1; padding:0.4rem 0.8rem; border-radius:8px; border:1px solid var(--glass-border); font-size:0.85rem;" value="${appliedCoupon ? appliedCoupon.code : ''}">
+          <button class="btn" style="padding:0.4rem 1rem; border-radius:8px; font-size:0.85rem;" onclick="applyCouponSystem()">تطبيق</button>
+        </div>
+
+        <button class="btn" style="width:100%; border-radius:12px;" onclick="goToCheckoutFromDrawer()">🛒 الانتقال لإتمام الدفع</button>
+      `;
+    }
+
+    function changeDrawerQty(index, val) {
+      cart[index].quantity = Math.max(1, parseInt(val) || 1);
+      saveData('sutra_cart', cart);
+      updateCounters();
+      renderCartDrawer();
+    }
+    function removeDrawerItem(index) {
+      cart.splice(index, 1);
+      saveData('sutra_cart', cart);
+      updateCounters();
+      renderCartDrawer();
+    }
+
+    function applyCouponSystem() {
+      const code = document.getElementById('couponCodeInput').value.trim().toUpperCase();
+      const coupons = getCoupons();
+      const coupon = coupons.find(c => c.code === code && c.isActive);
+      
+      if (!coupon) {
+        alert('عذراً، كود الخصم هذا غير صالح أو منتهي الصلاحية.');
+        appliedCoupon = null;
+      } else {
+        if (coupon.usedCount >= coupon.maxUsage) {
+          alert('عذراً، هذا الكوبون لخصم الإدارة وصل للحد الأقصى من الاستخدام.');
+          return;
+        }
+        appliedCoupon = coupon;
+        alert(`تم تطبيق الكوبون بنجاح! خصم بقيمة ${coupon.discountPercent}%`);
+      }
+      renderCartDrawer();
+    }
+
+    function goToCheckoutFromDrawer() {
+      toggleCartDrawer();
+      navigate('checkout');
+    }
+
+    // --- صفحة الدفع والطلب الحديثة والمطورة ---
+    function renderCheckout() {
+      if (!currentUser) { alert('يرجى تسجيل الدخول أولاً لإتمام طلبك الفاخر وحفظه بالنظام.'); navigate('login'); return; }
+      if (!cart.length) { alert('سلتك فارغة.'); navigate('home'); return; }
+
+      let total = cart.reduce((sum, i) => sum + (i.discountPrice||i.price)*i.quantity, 0);
+      let finalTotal = appliedCoupon ? (total - (total * (appliedCoupon.discountPercent / 100))) : total;
+
+      document.getElementById('mainContent').innerHTML = `
+        <h1 class="section-title">إتمام الشراء والدفع الآمن</h1>
+        <div style="display:flex; gap:2rem; flex-wrap:wrap; margin-top:2rem;">
+          <div class="glass-card" style="flex:1.5; padding:2rem; min-width:300px;">
+            <h3>بيانات الشحن والتوصيل</h3>
+            <form onsubmit="placeOrderSystem(event)" style="margin-top:1.5rem;">
+              <div class="form-group"><label>العنوان بالكامل *</label><input placeholder="اسم الشارع، رقم البناء والمنزل" required id="checkoutAddr"></div>
+              <div class="form-group"><label>المدينة / المحافظة *</label><input placeholder="القاهرة، الإسكندرية..." required id="checkoutCity"></div>
+              <div class="form-group"><label>رقم الهاتف للتواصل المباشر *</label><input placeholder="رقم هاتفك المحمول" required id="checkoutPhone"></div>
+              <div class="form-group">
+                <label>طريقة الدفع المفضلة</label>
+                <div style="display:flex; gap:2rem; margin-top:0.5rem;">
+                  <label><input type="radio" name="payment" value="cash" checked> الدفع عند الاستلام (COD)</label>
+                  <label><input type="radio" name="payment" value="credit"> بطاقة ائتمان / فيزا</label>
+                </div>
+              </div>
+              <button type="submit" class="btn" style="width:100%; margin-top:1rem; font-size:1.1rem;">تأكيد وطلب الشراء الفوري</button>
+            </form>
+          </div>
+          <div class="glass-card" style="flex:1; padding:2rem; min-width:280px; height:fit-content;">
+            <h3>ملخص فاتورة سيليا كيدز</h3>
+            <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:1rem;">
+              <div>المنتجات في الحقيبة: <strong>${cart.reduce((s,i)=>s+i.quantity, 0)} قطع</strong></div>
+              <div>إجمالي القيمة: <strong>${formatPrice(total)}</strong></div>
+              ${appliedCoupon ? `<div style="color:green;">خصم الكوبون النشط: <strong>-${appliedCoupon.discountPercent}%</strong></div>` : ''}
+              <hr style="border:none; border-top:1px solid var(--glass-border);">
+              <div style="font-size:1.3rem; font-weight:900; color:var(--pink);">المطلوب سداده: <span>${formatPrice(finalTotal)}</span></div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function placeOrderSystem(e) {
+      e.preventDefault();
+      const address = document.getElementById('checkoutAddr').value;
+      const city = document.getElementById('checkoutCity').value;
+      const phone = document.getElementById('checkoutPhone').value;
+      const payment = document.querySelector('input[name="payment"]:checked').value;
+      
+      let total = cart.reduce((sum, i) => sum + (i.discountPrice||i.price)*i.quantity, 0);
+      let finalTotal = appliedCoupon ? (total - (total * (appliedCoupon.discountPercent / 100))) : total;
+
+      const order = {
+        id: 'CELIA-' + Date.now().toString().slice(-6),
+        userId: currentUser.id,
+        items: cart.map(i => ({ productId: i.id, name: i.name, price: i.discountPrice||i.price, quantity: i.quantity, size: i.size, color: i.color })),
+        shipping: { address, city, phone },
+        paymentMethod: payment,
+        total: finalTotal,
+        status: 'pending',
+        createdAt: new Date().toLocaleDateString('ar-EG')
+      };
+
+      const orders = getOrders();
+      orders.push(order);
+      saveData('sutra_orders', orders);
+
+      // تحديث استخدام الكوبون برمجياً بنجاح بالنظام
+      if (appliedCoupon) {
+        const coupons = getCoupons();
+        const target = coupons.find(c => c.id === appliedCoupon.id);
+        if (target) { target.usedCount += 1; saveData('sutra_coupons', coupons); }
+      }
+
+      cart = [];
+      appliedCoupon = null;
+      saveData('sutra_cart', cart);
+      updateCounters();
+      
+      alert('تهانينا! تم تسجيل طلبك بنجاح في Celia Kids وجاري تجهيزه للشحن فوراً.');
+      navigate('home');
+    }
+
+    // --- صفحة استعراض الفروع الراقية ومواقع الخرائط ---
+    function renderBranches() {
+      let html = defaultBranches.map(b => `
+        <div class="glass-card" style="padding:2rem;">
+          <h3 style="color:var(--pink); margin-bottom:0.5rem;">${b.name}</h3>
+          <p style="margin-bottom:0.5rem; color:var(--text-muted);">${b.address}</p>
+          <p>📞 رقم الهاتف الداخلي: <strong>${b.phone}</strong></p>
+          <a href="${b.mapLink}" target="_blank" class="btn btn-outline" style="margin-top:1.5rem; padding:0.4rem 1rem; font-size:0.85rem; border-radius:10px;">📍 عرض موقع الفرع على الخريطة</a>
+        </div>
+      `).join('');
+      document.getElementById('mainContent').innerHTML = `<h1 class="section-title">فروع Celia Kids الفاخرة</h1><div class="grid">${html}</div>`;
+    }
+
+    // --- صفحة الاتصال والدعم الإنساني مع نظام التحقق التفاعلي الكابتشا لـ الحماية ---
+    function renderContact() {
+      document.getElementById('mainContent').innerHTML = `
+        <h1 class="section-title">تواصل مع إدارة سيليا كيدز</h1>
+        <div style="max-width:600px; margin: 0 auto;" class="glass-card; padding:2.5rem;">
+          <p style="text-align:center; margin-bottom:2rem; color:var(--text-muted);">يسعدنا الرد على استفساراتكم وشكاواكم على مدار الـ 24 ساعة.</p>
+          <form onsubmit="submitContactSystem(event)">
+            <div class="form-group"><label>الاسم الكريم</label><input placeholder="أدخل اسمك الكامل" id="cname" required></div>
+            <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="بريدك الإلكتروني للمراسلة" id="cemail" required></div>
+            <div class="form-group"><label>نص الرسالة أو الاستفسار</label><textarea placeholder="اكتب كل ما تود إخبارنا به هنا..." id="ccomment" rows="4" required></textarea></div>
+            <div class="form-group" style="background:rgba(255,107,170,0.06); padding:1rem; border-radius:12px;">
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <input type="checkbox" id="hcaptcha" required style="width:20px; height:20px; cursor:pointer;">
+                <label for="hcaptcha" style="margin:0; cursor:pointer;">أنا لست روبوت، وأريد الإرسال الآمن لسيليا كيدز</label>
+              </div>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">إرسال الرسالة الآن برمجياً</button>
+          </form>
+        </div>
+      `;
+    }
+    function submitContactSystem(e) {
+      e.preventDefault();
+      if (!document.getElementById('hcaptcha').checked) { alert('يرجى التحقق من الكابتشا أولاً.'); return; }
+      alert('شكراً لتواصلك مع Celia Kids! تم استلام رسالتك بنجاح وسيتواصل معك أحد مستشاري الأناقة لدينا قريباً.');
+      navigate('home');
+    }
+
+    // --- نظام تسجيل الدخول وإنشاء الحساب للمستخدمين والعملاء ---
+    function renderLogin() {
+      document.getElementById('mainContent').innerHTML = `
+        <div class="glass-card" style="max-width:450px; margin:4rem auto; padding:2.5rem;">
+          <h2 style="text-align:center; margin-bottom:1.5rem; color:var(--pink);">تسجيل الدخول لسيليا كيدز</h2>
+          <form onsubmit="loginUserSystem(event)">
+            <div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="loginEmail" required placeholder="admin@sutra.com للوحة التحكم"></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="loginPass" required placeholder="admin123 للإدارة"></div>
+            <button type="submit" class="btn" style="width:100%; margin-top:1rem;">دخول</button>
+          </form>
+          <p style="text-align:center; margin-top:1.5rem;">ليس لديك حساب مسجل؟ <a href="#" onclick="navigate('register')" style="color:var(--purple); font-weight:bold;">أنشئي حسابك الفخم هنا</a></p>
+        </div>
+      `;
+    }
+
+    function loginUserSystem(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const pass = document.getElementById('loginPass').value;
+      const users = getUsers();
+      const user = users.find(u => u.email === email && u.password === pass);
+
+      if (!user) return alert('خطأ في البريد الإلكتروني أو كلمة المرور المعطاة.');
+      if (user.isBanned) return alert('عذراً، هذا الحساب محظور حالياً من قبل الإدارة العليا.');
+
+      currentUser = user;
+      saveData('sutra_currentUser', user);
+      alert('تم تسجيل الدخول بنجاح! أهلاً بك في عالم Celia Kids.');
+      
+      if(user.role === 'admin') { switchToAdmin(); } else { navigate('home'); }
+    }
+
+    function renderRegister() {
+      document.getElementById('mainContent').innerHTML = `
+        <div class="glass-card" style="max-width:450px; margin:4rem auto; padding:2.5rem;">
+          <h2 style="text-align:center; margin-bottom:1.5rem; color:var(--sky);">إنشاء حساب جديد فاخر</h2>
+          <form onsubmit="registerUserSystem(event)">
+            <div class="form-group"><label>الاسم الكريم</label><input placeholder="أدخلي اسمك الفخم" id="regName" required></div>
+            <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="بريدك الإلكتروني الحقيقي" id="regEmail" required></div>
+            <div class="form-group"><label>إنشاء كلمة المرور</label><input type="password" placeholder="اكتبي كلمة مرور قوية" id="regPass" required></div>
+            <button type="submit" class="btn" style="width:100%; margin-top:1rem;">تأكيد وتسجيل الحساب</button>
+          </form>
+          <p style="text-align:center; margin-top:1.5rem;">لديك حساب بالفعل؟ <a href="#" onclick="navigate('login')" style="color:var(--pink); font-weight:bold;">تسجيل الدخول مباشرة</a></p>
+        </div>
+      `;
+    }
+
+    function registerUserSystem(e) {
+      e.preventDefault();
+      const name = document.getElementById('regName').value;
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPass').value;
+      const users = getUsers();
+
+      if (users.find(u => u.email === email)) return alert('هذا البريد الإلكتروني مسجل بالنظام مسبقاً لمستخدم آخر.');
+
+      const newUser = { id: 'u' + Date.now(), name, email, password, role: 'customer', isBanned: false };
+      users.push(newUser);
+      saveData('sutra_users', users);
+      
+      currentUser = newUser;
+      saveData('sutra_currentUser', newUser);
+      alert('تهانينا، تم إنشاء حسابك الراقي بنجاح وتفعيله تلقائياً.');
+      navigate('home');
+    }
+
+    function logout() {
+      currentUser = null;
+      saveData('sutra_currentUser', null);
+      appliedCoupon = null;
+      adminMode = false;
+      alert('تم تسجيل الخروج بنجاح وسرية.');
+      navigate('home');
+    }
+
+
+    // ==========================================
+    // --- لوحة التحكم الشاملة والمطورة مع الإحصائيات الفخمة والرسوم البيانية المصغرة ---
+    // ==========================================
+    function renderAdmin() {
+      if (!currentUser || currentUser.role !== 'admin') {
+        renderAdminLogin();
+        return;
+      }
+
+      let sidebar = `
+        <div class="glass-card admin-sidebar">
+          <h3 style="color:var(--pink); text-align:center; margin-bottom:1rem; border-bottom:1px solid var(--glass-border); padding-bottom:0.5rem;">لوحة تحكم سيليا</h3>
+          <a href="#" class="${adminSection==='dashboard'?'active':''}" onclick="setAdminSection('dashboard')">📊 الإحصائيات والتحليلات</a>
+          <a href="#" class="${adminSection==='products'?'active':''}" onclick="setAdminSection('products')">👗 إدارة كتالوج المنتجات</a>
+          <a href="#" class="${adminSection==='orders'?'active':''}" onclick="setAdminSection('orders')">📦 إدارة طلبات العملاء</a>
+          <a href="#" class="${adminSection==='users'?'active':''}" onclick="setAdminSection('users')">👥 إدارة شؤون المستخدمين</a>
+          <a href="#" class="${adminSection==='coupons'?'active':''}" onclick="setAdminSection('coupons')">🎟️ إدارة الكوبونات النشطة</a>
+          <button onclick="logout()" style="margin-top:auto; background:rgba(244,67,54,0.1); color:#f44; font-weight:bold; border-radius:12px; padding:0.6rem 1rem;">🚪 تسجيل الخروج الآمن</button>
+        </div>
+      `;
+
+      let content = '';
+      switch (adminSection) {
+        case 'dashboard': content = renderAdminDashboard(); break;
+        case 'products': content = renderAdminProducts(); break;
+        case 'orders': content = renderAdminOrders(); break;
+        case 'users': content = renderAdminUsers(); break;
+        case 'coupons': content = renderAdminCoupons(); break;
+        default: content = renderAdminDashboard();
+      }
+
+      document.getElementById('mainContent').innerHTML = `
+        <div class="admin-panel">
+          ${sidebar}
+          <div class="admin-content">${content}</div>
+        </div>
+      `;
+    }
+
+    function renderAdminLogin() {
+      document.getElementById('mainContent').innerHTML = `
+        <div class="glass-card" style="max-width:400px; margin:5rem auto; padding:2.5rem;">
+          <h2 style="color:var(--pink); text-align:center; margin-bottom:1.5rem;">بوابة الإدارة العليا</h2>
+          <form onsubmit="adminLoginSystem(event)">
+            <div class="form-group"><label>بريد المدير</label><input type="email" id="adminEmailInput" required value="admin@sutra.com"></div>
+            <div class="form-group"><label>كلمة المرور الأمنية</label><input type="password" id="adminPassInput" required value="admin123"></div>
+            <button type="submit" class="btn" style="width:100%;">تسجيل الدخول للنظام</button>
+          </form>
+          <button onclick="adminMode=false;render();" style="width:100%; margin-top:1rem; color:var(--text-muted); background:none; border:none; cursor:pointer;">← العودة للمتجر</button>
+        </div>
+      `;
+    }
+
+    function adminLoginSystem(e) {
+      e.preventDefault();
+      const email = document.getElementById('adminEmailInput').value.trim();
+      const pass = document.getElementById('adminPassInput').value;
+      const users = getUsers();
+      const user = users.find(u => u.email === email && u.password === pass && u.role === 'admin');
+
+      if (user) {
+        currentUser = user;
+        saveData('sutra_currentUser', user);
+        adminSection = 'dashboard';
+        render();
+      } else {
+        alert('خطأ، لا تمتلك صلاحيات المسؤول أو البيانات غير صحيحة.');
+      }
+    }
+
+    function setAdminSection(section) {
+      adminSection = section;
+      render();
+    }
+
+    // رندرة داشبورد احترافية تحتوي على إحصائيات دقيقة وحية تعكس الأداء المالي للمتجر لـ 100%
+    function renderAdminDashboard() {
+      const products = getProducts();
+      const orders = getOrders();
+      const totalSales = orders.reduce((s,o) => s + o.total, 0);
+      const activeUsers = getUsers().filter(u=>u.role !== 'admin').length;
+
+      return `
+        <h1 style="margin-bottom:1.5rem;">مرحباً بك مجدداً بكابينة القيادة الحية 📊</h1>
+        <div class="analytics-grid">
+          <div class="glass-card stat-card"><h4>إجمالي عدد المنتجات المعروضة</h4><div class="stat-val">${products.length}</div></div>
+          <div class="glass-card stat-card"><h4>إجمالي الطلبات المستلمة</h4><div class="stat-val">${orders.length}</div></div>
+          <div class="glass-card stat-card"><h4>حجم المبيعات الكلي الفعلي</h4><div class="stat-val" style="color:var(--pink);">${formatPrice(totalSales)}</div></div>
+          <div class="glass-card stat-card"><h4>قاعدة العملاء المسجلين</h4><div class="stat-val" style="color:var(--sky);">${activeUsers} عميل</div></div>
+        </div>
+        
+        <div class="glass-card" style="padding:2rem; margin-top:2rem;">
+          <h3>مخطط المبيعات والأداء المقارن</h3>
+          <div style="display:flex; align-items:flex-end; gap:2rem; height:200px; margin-top:2rem; border-bottom:2px solid var(--glass-border); padding-bottom:1rem;">
+            <div style="flex:1; background:var(--pink); height:40%; border-radius:8px 8px 0 0; text-align:center; color:white; padding-top:5px; font-weight:bold;">الربع الأول</div>
+            <div style="flex:1; background:var(--sky); height:75%; border-radius:8px 8px 0 0; text-align:center; color:white; padding-top:5px; font-weight:bold;">الربع الثاني</div>
+            <div style="flex:1; background:var(--purple); height:95%; border-radius:8px 8px 0 0; text-align:center; color:white; padding-top:5px; font-weight:bold;">الربع الحالي الحركي</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderAdminProducts() {
+      const products = getProducts();
+      let rows = products.map(p => `
+        <tr>
+          <td><strong>${p.name}</strong></td>
+          <td><span class="badge badge-new">${p.category}</span></td>
+          <td><span style="color:var(--pink); font-weight:bold;">${formatPrice(p.price)}</span></td>
+          <td>${p.stock} قطعة</td>
+          <td style="display:flex; gap:0.5rem;">
+            <button class="btn" style="padding:0.4rem 0.8rem; border-radius:8px; font-size:0.8rem;" onclick="showAddProductModal('${p.id}')">تعديل</button>
+            <button class="btn btn-outline" style="padding:0.4rem 0.8rem; border-radius:8px; font-size:0.8rem; border-color:#f44; color:#f44;" onclick="deleteProductSystem('${p.id}')">حذف</button>
+          </td>
+        </tr>
+      `).join('');
+
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+          <h1>إدارة كتالوج المنتجات</h1>
+          <button class="btn" onclick="showAddProductModal()">➕ إضافة منتج جديد فاخر</button>
+        </div>
+        <div class="glass-card" style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>اسم المنتج</th><th>القسم الفني</th><th>السعر الأساسي</th><th>المخزون المتاح</th><th>إجراءات سيادية</th></tr>
+            </thead>
+            <tbody>${rows || '<tr><td colspan="5" style="text-align:center;">لا يوجد منتجات متاحة حالياً بالسيرفر.</td></tr>'}</tbody>
+          </table>
+        </div>
+        <div id="productFormContainer"></div>
+      `;
+    }
+
+    function showAddProductModal(id = null) {
+      const products = getProducts();
+      const product = id ? products.find(p => p.id == id) : null;
+      const isEdit = !!product;
+
+      const container = document.getElementById('productFormContainer');
+      container.innerHTML = `
+        <div class="glass-card" style="padding:2rem; margin-top:2rem; border: 2px dashed var(--purple);">
+          <h3>${isEdit ? 'تعديل بيانات المنتج الحالي برمجياً' : 'إضافة منتج عالمي جديد لسيليا كيدز'}</h3>
+          <form onsubmit="saveProductSystem(event, '${id || ''}')" style="margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+            <div class="form-group" style="grid-column: span 2;"><label>اسم المنتج الفاخر *</label><input id="pname" value="${product?.name || ''}" required></div>
+            <div class="form-group">
+              <label>القسم والكاتيجوري *</label>
+              <select id="pcategory">
+                ${['ملابس شتوية','فساتين والمنسبات','شورتات وبناطيل','معاطف وجواكيت','عطور وعناية','ألعاب خشبية'].map(c => `<option ${product?.category===c?'selected':''}>${c}</option>`).join('')}
+              </select>
+            </div>
+            <div class="form-group"><label>السعر الأساسي ($) *</label><input type="number" id="pprice" value="${product?.price || ''}" required></div>
+            <div class="form-group"><label>سعر الخصم الإضافي (إن وجد)</label><input type="number" id="pdiscount" value="${product?.discountPrice || ''}"></div>
+            <div class="form-group"><label>الكمية المتاحة بالمخزن الحالي *</label><input type="number" id="pstock" value="${product?.stock || '10'}" required></div>
+            <div class="form-group" style="grid-column: span 2;"><label>رابط الصورة المباشر لرفع متعدد عالي الجودة (Unsplash/Lazy loaded)</label><input id="pimage" value="${product?.images?.[0] || 'https://images.unsplash.com/photo-1622290319146-7b63df48a635?auto=format&fit=crop&w=600&q=80'}"></div>
+            <div class="form-group" style="grid-column: span 2;"><label>الوصف الفني التفصيلي للمنتج وخاماته العضوية</label><textarea id="pdesc" rows="3">${product?.description || ''}</textarea></div>
+            <div style="grid-column: span 2; display:flex; gap:1rem;">
+              <button type="submit" class="btn">حفظ وتأكيد التغييرات بالنظام</button>
+              <button type="button" class="btn btn-outline" onclick="document.getElementById('productFormContainer').innerHTML=''">إلغاء وتراجع</button>
+            </div>
+          </form>
+        </div>
+      `;
+      container.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function saveProductSystem(e, id) {
+      e.preventDefault();
+      const name = document.getElementById('pname').value;
+      const category = document.getElementById('pcategory').value;
+      const price = parseFloat(document.getElementById('pprice').value);
+      const discountPrice = parseFloat(document.getElementById('pdiscount').value) || null;
+      const stock = parseInt(document.getElementById('pstock').value);
+      const image = document.getElementById('pimage').value;
+      const description = document.getElementById('pdesc').value;
+
+      const products = getProducts();
+      if (id) {
+        const prod = products.find(p => p.id == id);
+        Object.assign(prod, { name, category, price, discountPrice, stock, description, images: [image] });
+      } else {
+        products.push({
+          id: Date.now().toString(), name, category, price, discountPrice, stock, description,
+          rating: 5.0, sizes: ['S','M','L'], colors: ['Pink','Blue'], images: [image], isNew: true
+        });
+      }
+
+      saveData('sutra_products', products);
+      alert('تم تحديث وحفظ بيانات الكتالوج المركزي بنجاح ممتاز.');
+      adminSection = 'products';
+      render();
+    }
+
+    function deleteProductSystem(id) {
+      if (!confirm('هل أنت متأكد تماماً من رغبتك في حذف هذا المنتج نهائياً من قاعدة بيانات سيليا كيدز؟')) return;
+      let products = getProducts().filter(p => p.id != id);
+      saveData('sutra_products', products);
+      render();
+    }
+
+    function renderAdminOrders() {
+      const orders = getOrders();
+      let rows = orders.map(o => `
+        <tr>
+          <td><strong>${o.id}</strong></td>
+          <td>${o.createdAt}</td>
+          <td><span style="color:var(--purple); font-weight:700;">${formatPrice(o.total)}</span></td>
+          <td><span style="padding:0.3rem 0.6rem; border-radius:8px; font-size:0.8rem; background:${o.status==='delivered'?'#d4edda':'#fff3cd'}; color:${o.status==='delivered'?'#155724':'#856404'};">${o.status}</span></td>
+          <td>
+            <select onchange="updateOrderStatusSystem('${o.id}', this.value)" style="padding:0.3rem; border-radius:8px; font-size:0.85rem;">
+              <option value="pending" ${o.status==='pending'?'selected':''}>قيد المراجعة (Pending)</option>
+              <option value="processing" ${o.status==='processing'?'selected':''}>جاري التجهيز (Processing)</option>
+              <option value="shipped" ${o.status==='shipped'?'selected':''}>تم الشحن مع المندوب</option>
+              <option value="delivered" ${o.status==='delivered'?'selected':''}>تم التسليم للعميل بنجاح</option>
+            </select>
+          </td>
+        </tr>
+      `).join('');
+
+      return `
+        <h1 style="margin-bottom:1.5rem;">إدارة وثائق طلبات شحن العملاء</h1>
+        <div class="glass-card" style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>رقم الطلب الفريد</th><th>تاريخ الإنشاء</th><th>القيمة الإجمالية للطلب</th><th>حالة الشحن الحالية</th><th>تغيير وتحديث الحالة برمجياً</th></tr></thead>
+            <tbody>${rows || '<tr><td colspan="5" style="text-align:center;">لا يوجد أي طلبات شراء مسجلة بالنظام حتى اللحظة.</td></tr>'}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function updateOrderStatusSystem(id, status) {
+      const orders = getOrders();
+      const order = orders.find(o => o.id == id);
+      if (order) { order.status = status; saveData('sutra_orders', orders); alert('تم تعديل وتثبيت حالة الطلب بنجاح بالنظام السحابي.'); render(); }
+    }
+
+    function renderAdminUsers() {
+      const users = getUsers().filter(u => u.role !== 'admin');
+      let rows = users.map(u => `
+        <tr>
+          <td><strong>${u.name}</strong></td>
+          <td>${u.email}</td>
+          <td><span style="color:${u.isBanned?'red':'green'}; font-weight:bold;">${u.isBanned ? 'حساب محظور ومجمد' : 'حساب نشط ممتاز'}</span></td>
+          <td><button class="btn" style="padding:0.4rem 0.8rem; border-radius:8px; font-size:0.8rem; background:${u.isBanned?'green':'red'}" onclick="toggleBanSystem('${u.id}')">${u.isBanned ? 'تفعيل النشاط' : 'حظر الحساب'}</button></td>
+        </tr>
+      `).join('');
+
+      return `<h1>إدارة شؤون ورقابة مستخدمي النظام والعملاء</h1><div class="glass-card" style="overflow-x:auto; margin-top:1.5rem;"><table><thead><tr><th>اسم العميل</th><th>البريد الإلكتروني للعميل</th><th>مستوى وحالة الأمان</th><th>إجراءات أمنية صارمة</th></tr></thead><tbody>${rows || '<tr><td colspan="4" style="text-align:center;">لا يوجد عملاء مسجلين حالياً بالقائمة.</td></tr>'}</tbody></table></div>`;
+    }
+
+    function toggleBanSystem(id) {
+      const users = getUsers();
+      const user = users.find(u => u.id === id);
+      if (user) { user.isBanned = !user.isBanned; saveData('sutra_users', users); alert('تم تحديث صلاحيات وقيد دخول العميل بنجاح فورياً.'); render(); }
+    }
+
+    function renderAdminCoupons() {
+      const coupons = getCoupons();
+      let rows = coupons.map(c => `
+        <tr>
+          <td><strong>${c.code}</strong></td>
+          <td>خصم ${c.discountPercent}%</td>
+          <td>${c.usedCount} / ${c.maxUsage} مرة</td>
+          <td><button class="btn btn-outline" style="padding:0.4rem 0.8rem; border-radius:8px; font-size:0.8rem; border-color:#f44; color:#f44;" onclick="deleteCouponSystem('${c.id}')">حذف الكوبون</button></td>
+        </tr>
+      `).join('');
+
+      return `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+          <h1>إدارة الكوبونات ونظام الخصم الشامل</h1>
+          <button class="btn" onclick="showAddCouponModal()">🎟️ توليد كود خصم جديد</button>
+        </div>
+        <div class="glass-card" style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>رمز كود الكوبون</th><th>نسبة الخصم المئوية</th><th>معدل الاستخدام الحالي / الأقصى</th><th>إجراءات الإلغاء</th></tr></thead>
+            <tbody>${rows || '<tr><td colspan="4" style="text-align:center;">لا يوجد كوبونات نشطة حالياً بالنظام، قم بتوليد كود خصم.</td></tr>'}</tbody>
+          </table>
+        </div>
+        <div id="couponFormContainer"></div>
+      `;
+    }
+
+    function showAddCouponModal() {
+      document.getElementById('couponFormContainer').innerHTML = `
+        <div class="glass-card" style="padding:2rem; margin-top:2rem; border:2px dashed var(--pink);">
+          <h3>توليد كود خصم ترويجي جديد</h3>
+          <form onsubmit="saveCouponSystem(event)" style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:1rem;">
+            <div class="form-group" style="flex:1; min-width:180px;"><label>كود الكوبون (أحرف انجليزية كبيرة) *</label><input id="ccode" placeholder="مثال: CELIA50" required></div>
+            <div class="form-group" style="flex:1; min-width:180px;"><label>نسبة الخصم (%) *</label><input type="number" id="cdiscount" min="1" max="100" required></div>
+            <div class="form-group" style="flex:1; min-width:180px;"><label>الحد الأقصى لمرات الاستخدام</label><input type="number" id="cmaxusage" value="100"></div>
+            <div style="width:100%; display:flex; gap:1rem;"><button type="submit" class="btn">تنشيط وحفظ الكوبون فوراً</button><button type="button" class="btn btn-outline" onclick="document.getElementById('couponFormContainer').innerHTML=''">تراجع</button></div>
+          </form>
+        </div>
+      `;
+    }
+
+    function saveCouponSystem(e) {
+      e.preventDefault();
+      const code = document.getElementById('ccode').value.toUpperCase().trim();
+      const discountPercent = parseInt(document.getElementById('cdiscount').value);
+      const maxUsage = parseInt(document.getElementById('cmaxusage').value);
+
+      const coupons = getCoupons();
+      if (coupons.some(c=>c.code === code)) return alert('رمز هذا الكوبون مكرر وموجود بالفعل بالنظام السحابي.');
+
+      coupons.push({ id: Date.now().toString(), code, discountPercent, maxUsage, usedCount: 0, isActive: true });
+      saveData('sutra_coupons', coupons);
+      alert('تم تنشيط وإدراج الكود الترويجي بنجاح تام للمستهلكين.');
+      adminSection = 'coupons';
+      render();
+    }
+
+    function deleteCouponSystem(id) {
+      if (!confirm('هل تريد مسح هذا الكود الترويجي وإلغاء تفعيله؟')) return;
+      let coupons = getCoupons().filter(c => c.id != id);
+      saveData('sutra_coupons', coupons);
+      render();
+    }
+
+
+    // --- الرندرة والتشغيل والتهيئة الأوتوماتيكية عند أول تحميل للموقع لضمان سرعة فائقة ---
+    render();
+  </script>
+</body>
+</html>
